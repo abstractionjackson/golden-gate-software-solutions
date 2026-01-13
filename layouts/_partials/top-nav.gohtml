@@ -1,0 +1,26 @@
+<nav>
+  <ul>
+    <li>
+      <a href="{{ site.BaseURL }}" class="logo">
+        {{ with resources.Get "logo_1.png" }}
+          <img src="{{ .Permalink }}" alt="Logo" />
+        {{ end }}
+      </a>
+    </li>
+    {{ with site.Menus.main }}
+      {{ range . }}
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  <ul></ul>
+  <ul>
+    <li>
+      <a href="/contact">
+        <button>Contact</button>
+      </a>
+    </li>
+  </ul>
+</nav>

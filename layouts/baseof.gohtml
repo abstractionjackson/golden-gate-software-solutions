@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {{ partial "css" . }}
+  </head>
+  <body>
+    {{ block "header" . }}
+      <header>{{ partial "top-nav" . }}</header>
+    {{ end }}
+    {{ block "main" . }}
+      <main>{{ .Content }}</main>
+    {{ end }}
+    {{ block "footer" . }}
+      <footer><div id="copyright">©️ 2026</div></footer>
+    {{ end }}
+  </body>
+</html>

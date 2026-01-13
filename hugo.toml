@@ -1,0 +1,31 @@
+baseURL = 'https://goldengatesoftwaresolutions.com/'
+languageCode = 'en-us'
+title = 'Jackson the Tech Guy'
+
+[menus]
+
+[[menus.main]]
+name = "About"
+pageRef = "/about"
+weight = 30
+
+[[menus.main]]
+name = "Blog"
+pageRef = "/blog"
+weight = 30
+
+[[menus.main]]
+page = "Services"
+pageRef = "/services"
+weight = 10
+
+[outputformats]
+[outputformats.gohtml]
+mediaType = "text/html"
+baseName = "index"
+isHTML = true
+
+[params]
+[params.contact]
+email = "hello@goldengatesoftwaresolutions.com"
+phone = "+14157613680"
