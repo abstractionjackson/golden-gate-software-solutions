@@ -5,8 +5,10 @@
   --lightgray: oklch(0.9764 0.0013 286.38);
   --gray: oklch(0.9489 0.0029 264.54);
   --black: oklch(0 0 0);
-  --blue: oklch(0.7658 0.1402 232.86);
+  --blue: oklch(0.5973 0.1402 254.51);
   --red: oklch(0.6341 0.221 15.91);
+  --brand-logo-width: 4rem;
+  --base-header-height: var(--barnd-logo-width);
 }
 
 html,
@@ -25,19 +27,26 @@ a {
 }
 
 body > header {
-  --bg-color: var(--gray);
+    --bg-color: var(--lightgray);
+    height: var(--base-header-height);
   background-color: var(--bg-color);
   border-bottom: 1px solid oklch(from var(--bg-color) 0.8 c h);
   padding: 0 3rem;
   > nav {
+    max-width: var(--max-width-content);
+    margin: auto;
     font-size: 16pt;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     align-items: center;
+    font-weight: bold;
     a.logo > img {
       aspect-ratio: 1;
-      width: 4rem;
+      width: var(--brand-logo-width);
+    }
+    a:hover {
+      color: oklch(from var(--blue) 0.7 c h);
     }
     ul {
       list-style: none;
@@ -45,6 +54,8 @@ body > header {
       display: flex;
       gap: 1rem;
       align-items: center;
+      display: flex;
+      justify-content: center;
     }
     a[href="/contact"] > button {
       padding: 1rem;
@@ -55,13 +66,52 @@ body > header {
       cursor: pointer;
       box-shadow: 0 0 5px var(--black);
     }
+    a[href="/contact"]:hover > button {
+      color: oklch(from var(--red) 0.7 c h);
+      border-color: oklch(from var(--red) 0.7 c h);
+    }
   }
 }
 
 body > main {
-  max-width: var(--max-width-content);
-  margin: auto;
-  padding: 0 2rem;
+    > section {
+	margin: auto;
+	max-width: var(--max-width-content);
+    }
+
+    section#hero {
+	max-width: initial;
+	margin: 0 5rem;
+	padding: 3rem 0;
+    }
+	
+    article.hero {
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+	> header,
+	> figure {
+	    	    margin: auto;
+	}
+	> header {
+	    margin: auto;
+	    > hgroup {
+		h1 {
+		    font-size: 3em;
+		}
+		p {
+		    font-size: 1.5em;
+		}
+	    }
+	}
+	> figure {
+	    > img {
+		height: 100%;
+		width: auto;
+		
+	    }
+	}
+    }
 }
 
 body > footer {

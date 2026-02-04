@@ -1,12 +1,6 @@
 <nav>
   <ul>
-    <li>
-      <a href="{{ site.BaseURL }}" class="logo">
-        {{ with resources.Get "logo_1.png" }}
-          <img src="{{ .Permalink }}" alt="Logo" />
-        {{ end }}
-      </a>
-    </li>
+    
     {{ with site.Menus.main }}
       {{ range . }}
         <li>
@@ -14,8 +8,17 @@
         </li>
       {{ end }}
     {{ end }}
+
   </ul>
-  <ul></ul>
+  <ul>
+        <li>
+      <a href="{{ site.BaseURL }}" class="logo">
+        {{ with resources.Get "logo_1.png" }}
+          <img src="{{ .Permalink }}" alt="Logo" />
+        {{ end }}
+      </a>
+    </li>
+  </ul>
   <ul>
     <li>
       <a href="/contact">

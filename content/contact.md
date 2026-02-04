@@ -10,4 +10,4 @@ title = 'Contact 👋🏻'
 📞 [(415) 761-3680](tel:14157613680)
 
 ## Email
-✉️ [hello@goldengatesoftwaresolutions.com](mailto:hello@goldengatesoftwaresolutions.com)
+✉️ [jackson@goldengatesoftwaresolutions.com](mailto:jackson@goldengatesoftwaresolutions.com)
