@@ -16,7 +16,7 @@ weight = 30
 
 [[menus.main]]
 page = "Services"
-pageRef = "/services"
+pageRef = "/"
 weight = 10
 
 [outputformats]

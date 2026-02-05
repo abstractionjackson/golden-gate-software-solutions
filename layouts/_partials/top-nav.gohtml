@@ -1,25 +1,20 @@
+{{ $currentPage := . }}
 <nav>
   <ul>
-    
-    {{ with site.Menus.main }}
-      {{ range . }}
-        <li>
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
-      {{ end }}
-    {{ end }}
-
-  </ul>
-  <ul>
-        <li>
+    <li>
       <a href="{{ site.BaseURL }}" class="logo">
         {{ with resources.Get "logo_1.png" }}
-          <img src="{{ .Permalink }}" alt="Logo" />
+        <img src="{{ .Permalink }}" alt="Logo" class="brand logo" width="300" height="300"/>
         {{ end }}
       </a>
     </li>
-  </ul>
-  <ul>
+    {{ with site.Menus.main }}
+    {{ range . }}
+    <li>
+      <a href="{{ .URL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+    {{ end }}
     <li>
       <a href="/contact">
         <button>Contact</button>

@@ -1,126 +1,94 @@
+
+
 :root {
-  color-scheme: light dark;
-  --max-width-content: 768px;
-  --white: oklch(1 0 0);
-  --lightgray: oklch(0.9764 0.0013 286.38);
-  --gray: oklch(0.9489 0.0029 264.54);
-  --black: oklch(0 0 0);
-  --blue: oklch(0.5973 0.1402 254.51);
-  --red: oklch(0.6341 0.221 15.91);
-  --brand-logo-width: 4rem;
-  --base-header-height: var(--barnd-logo-width);
+    color-scheme: light dark;
+    --color-neutral-light: oklch(0.9412 0.0049 247.3);
+    --color-neutral-dark: oklch(0.1677 0.0049 247.3);
+    --color-blue-light: oklch(0.7411 0.14 247.3);
+    --color-blue-dark: oklch(0.6353 0.1801 253.06);
+    --color-anchor: light-dark(
+	var(--color-neutral-dark),
+	var(--color-neutral-light));
+    --bg-primary-light: var(--color-blue-light);
+    --bg-primary-dark: var(--color-blue-dark);
+    --font-primary: "Helvetica", "Arial", sans-serif;
+    --trans-rate-primary: 0.35s;
 }
 
-html,
+img {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--white);
-  color: var(--black);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-body > header {
-    --bg-color: var(--lightgray);
-    height: var(--base-header-height);
-  background-color: var(--bg-color);
-  border-bottom: 1px solid oklch(from var(--bg-color) 0.8 c h);
-  padding: 0 3rem;
-  > nav {
-    max-width: var(--max-width-content);
-    margin: auto;
-    font-size: 16pt;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    align-items: center;
-    font-weight: bold;
-    a.logo > img {
-      aspect-ratio: 1;
-      width: var(--brand-logo-width);
+    min-height: 100svh;
+    font-family: var(--font-primary);
+    > header {
+	width: 100%;
+	height: auto;
+	padding: 1rem;
+	box-sizing: border-box;
     }
-    a:hover {
-      color: oklch(from var(--blue) 0.7 c h);
+    > main { display: none; }
+    > footer {}
+}
+
+body > header > nav {
+    img.brand.logo {
+	width: 50px;
+	height: auto;
+	background: #fff;
     }
     ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-    }
-    a[href="/contact"] > button {
-      padding: 1rem;
-      background-color: oklch(from var(--red) l c h / 0.2);
-      color: oklch(from var(--red) l c h);
-      border: 1px solid oklch(from var(--red) l c h);
-      border-radius: 10%;
-      cursor: pointer;
-      box-shadow: 0 0 5px var(--black);
-    }
-    a[href="/contact"]:hover > button {
-      color: oklch(from var(--red) 0.7 c h);
-      border-color: oklch(from var(--red) 0.7 c h);
-    }
-  }
-}
-
-body > main {
-    > section {
-	margin: auto;
-	max-width: var(--max-width-content);
-    }
-
-    section#hero {
-	max-width: initial;
-	margin: 0 5rem;
-	padding: 3rem 0;
-    }
-	
-    article.hero {
 	display: flex;
-	justify-content: center;
-	gap: 5rem;
-	> header,
-	> figure {
-	    	    margin: auto;
-	}
-	> header {
-	    margin: auto;
-	    > hgroup {
-		h1 {
-		    font-size: 3em;
-		}
-		p {
-		    font-size: 1.5em;
-		}
-	    }
-	}
-	> figure {
-	    > img {
-		height: 100%;
-		width: auto;
-		
-	    }
+	align-items: center;
+	gap: 1rem;
+	li:last-child {
+	    margin-left: auto;
 	}
     }
-}
+    a,
+    a:visited {
+	color:  var(--color-anchor);
+	text-decoration: none;
+	&.active {
+	    border-bottom: 2px solid var(--color-anchor);
+	}
+	&:hover {
+	    --relative-color: oklch(
+		from
+		var(--color-anchor)
+		.75 c h);
+	    color: var(--relative-color);
+	    border-color: var(--relative-color);
+	}
+	transition:
+	    color var(--trans-rate-primary) ease,
+	    border-color var(--trans-rate-primary) ease;
 
-body > footer {
-  margin-top: auto;
-  padding: 0.5rem;
-  > #copyright {
-    text-shadow: 0 3px 3px var(--gray);
-    padding: 1rem;
-    width: fit-content;
-    margin: auto;
-  }
+    }
+    button {
+	--color: light-dark(
+	    #fff,
+	    var(--color-neutral-dark));
+	--bg : light-dark(
+	    var(--bg-primary-dark),
+	    var(--bg-primary-light));
+	color: var(--color);
+	background: var(--bg);
+	border: 2px solid;
+	border-color: oklch(from var(--bg) 0.5 c h);
+	padding: 0.35rem 0.5rem;
+	border-radius: 10px;
+	cursor: pointer;
+	&:hover {
+	    background-color: oklch(from var(--bg) 0.8 c h);
+	}
+	transition: all var(--trans-rate-primary) ease;
+    }
 }
