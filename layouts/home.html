@@ -1,8 +1,6 @@
 {{ define "main" }}
-<main>
-  <section id="hero">{{ partial "hero" . }}</section>
+  <section>{{ partial "hero" site.Data.home.hero }}</section>
   <section>
     <main>{{ .Content }}</main>
   </section>
-</main>
 {{ end }}

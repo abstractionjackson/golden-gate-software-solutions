@@ -1,11 +1,11 @@
 <article class="hero">
   <header>
     <hgroup>
-      <h1>{{ site.Data.home.hero.heading | safeHTML }}</h1>
-      <p>{{ site.Data.home.hero.subheading }}</p>
+      <h1>{{ .heading | safeHTML }}</h1>
+      <p>{{ .subheading | safeHTML }}</p>
     </hgroup>
   </header>
   <figure>
-  <img alt="" src="/images/comic-book-cover.png"/>
+  <img alt="{{ .image.alt }}" src="{{ .image.src }}"/>
 </figure>
 </article>
