@@ -1,6 +1,6 @@
 {{ define "main" }}
-  <section>{{ partial "hero" site.Data.home.hero }}</section>
-  <section>
-    <main>{{ .Content }}</main>
-  </section>
+<section class="hero">{{ partial "hero" site.Data.home.hero }}</section>
+<section id="services">
+  <main>{{ .Content }}</main>
+</section>
 {{ end }}

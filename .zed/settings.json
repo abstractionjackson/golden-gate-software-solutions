@@ -1,9 +1,13 @@
 {
+  "tab_size": 2,
+  "hard_tabs": false,
   "file_types": {
     "HTML": ["html", "gohtml"],
   },
   "languages": {
     "HTML": {
+      "tab_size": 2,
+      "hard_tabs": false,
       "formatter": {
         "external": {
           "command": "prettier",

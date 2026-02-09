@@ -1,11 +1,11 @@
 
 {
-  "hero": {
-    "heading": "Your Very Worst Computer Issues are <u>No Match</u> for Jackson the Tech Guy!",
-      "subheading": "From repairs and replacements, to installations, upgrades, and bespoke solutions, we offer best-in-class IT services that meet your unique business or personal needs.",
-      "image" : {
-	  "src": "/images/comic-book-cover.png",
-	  "alt": "a comic-book cover of an heroic technician doing battle with a malevolvent and beige computer"
-      }
-  }
+    "hero": {
+	"heading": "Your Very Worst Computer Issues are <u>No Match</u> for Jackson the Tech Guy!",
+	"subheading": "From repairs and replacements, to installations, upgrades, and bespoke solutions, we offer best-in-class IT services that meet your unique business or personal needs.",
+	"image" : {
+	    "src": "/images/comic-book-cover.png",
+	    "alt": "a comic-book cover of an heroic technician doing battle with a malevolvent and beige computer"
+	}
+    }
 }

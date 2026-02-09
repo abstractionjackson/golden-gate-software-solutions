@@ -18,6 +18,8 @@ weight = 30
 page = "Services"
 pageRef = "/"
 weight = 10
+[menus.main.params]
+sectionId = "services"
 
 [outputformats]
 [outputformats.gohtml]
