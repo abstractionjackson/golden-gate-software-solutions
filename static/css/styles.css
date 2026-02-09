@@ -47,7 +47,11 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
+    background: linear-gradient(#fff, #5dd9fb, #036ee0);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     > * {
       margin: auto;
     }
@@ -122,6 +126,12 @@ body > header > nav {
   }
 }
 
+section.hero {
+  background: linear-gradient(#fff, #5dd9fb, #5dd9fb, #5dd9fb);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 article.hero {
   padding: 2rem;
   h1 {
@@ -130,6 +140,13 @@ article.hero {
   header {
     text-align: center;
     margin-bottom: 1.5rem;
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: left;
+    background: linear-gradient(to top, #fff, lightyellow);
+    color: #333;
   }
   figure {
     max-width: 500px;
@@ -144,7 +161,6 @@ article.hero {
         font-size: 1.75em;
       }
       margin: auto;
-      padding: 4rem;
       text-align: left;
       max-width: 768px;
     }
@@ -158,8 +174,18 @@ article.hero {
 section#services {
   text-align: center;
   padding: 2rem 0;
-  h1 {
+  background: linear-gradient(#5dd9fb, #5dd9fb, #5dd9fb, #fff);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  > h1 {
     margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding: 2rem;
   }
   > ul {
     display: flex;
@@ -184,10 +210,11 @@ section#services {
       gap: 1rem;
       grid-template-columns: auto 1fr;
       border-bottom: 1px solid;
-      padding: 1.5rem;
-      background-color: light-dark(#f4f4f4, darkslategray);
+      padding: 0.73rem 1.5rem;
+      background-color: light-dark(#f4f4f4, #036ee0);
       > svg {
-        margin: auto 1rem;
+        color: light-dark(initial, #fff);
+        margin: auto;
         width: 50px;
         height: auto;
       }
@@ -198,6 +225,8 @@ section#services {
     }
     main {
       padding: 1rem;
+      background-color: light-dark(#fff, #333);
+      color: light-dark(#000, #fff);
       ul {
         text-align: left;
         list-style: disc;
