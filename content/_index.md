@@ -8,7 +8,7 @@ title = 'Services'
 - Mac, Windows, Linux PCs
 - Printers, Scanners, and Connected Devices
 - Networking
-## Software Application Bug Fixes
+## Software Application Support
 - Install and Configuration
 - Doctoring and Cleanup
 - Performance Optimization

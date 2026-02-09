@@ -94,7 +94,18 @@ body > header > nav {
   }
 }
 
-section.hero {
+.content-grid {
+  display: grid;
+  grid-template-columns:
+    [full-width-start] 2rem
+    [expand-start] 1fr
+    [content-start] 4fr
+    [content-end] 1fr
+    [expand-end] 2rem
+    [full-width-end];
+  > * {
+    grid-column: content-start / content-end;
+  }
 }
 
 article.hero {
@@ -127,5 +138,12 @@ article.hero {
       grid-column: 2 / 3;
       margin: auto;
     }
+  }
+}
+
+section#services {
+  > main {
+    text-align: center;
+    padding: 2rem 0;
   }
 }
