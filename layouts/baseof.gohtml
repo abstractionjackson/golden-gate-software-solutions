@@ -11,10 +11,10 @@
   <body>
     <header>
       {{ block "header" . }}
-      {{ partial "top-nav" . }}
+        {{ partial "top-nav" . }}
       {{ end }}
     </header>
     <main>{{ block "main" . }}{{ end }}</main>
-    <footer>{{ block "footer" . }}<div id="copyright">©️ 2026</div>{{ end }}</footer>
+    <footer>{{ block "footer" . }}{{ partial "footer" . }}{{ end }}</footer>
   </body>
 </html>

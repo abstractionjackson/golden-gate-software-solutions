@@ -1,0 +1,11 @@
+{{ $icon := .Get "icon" }}
+{{ $title := .Get "title" }}
+
+<article class="serviceCard">
+  <header>
+    {{ partial "icon" $icon }}
+    <h1>{{ $title | title }}</h1></header>
+  <main>
+    {{ .Inner | markdownify }}
+  </main>
+</article>

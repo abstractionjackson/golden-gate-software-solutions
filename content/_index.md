@@ -4,18 +4,22 @@ title = 'Services'
 +++
 
 # Our Services
-## Computer Hardware Repair
+
+- {{< serviceCard title="Laptop and Desktop Repair" icon="computer" >}}
 - Mac, Windows, Linux PCs
 - Printers, Scanners, and Connected Devices
 - Networking
-## Software Application Support
+{{</ serviceCard >}}
+
+- {{< serviceCard title="Software Application Support" icon="code">}}
 - Install and Configuration
 - Doctoring and Cleanup
 - Performance Optimization
 - Malware and Virus Removal
-# 💬 Free Quote!
-Call or email for a free quote, today!
+{{</ serviceCard >}}
 
-[(415) 761-3680](tel:14157613680)
-
-[hello@goldengatesoftwaresolutions.com](mailto:hello@goldengatesoftwaresolutions.com)
+- {{< serviceCard title="Data Recovery" icon="hard_drive" >}}
+- Safe & Secure
+- Fast
+- Free Diagnostic
+{{</ serviceCard >}}
