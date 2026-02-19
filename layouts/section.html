@@ -1,21 +1,19 @@
 {{ define "main" }}
-<main>
-  <section>
-    <header>
-      <hgroup>
-        <h1>{{ .Title }}</h1>
-        <p>{{ .Content }}</p>
-      </hgroup>
-    </header>
-    <main>
-      <ul>
-        {{ range .RegularPages }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-      </ul>
-    </main>
-  </section>
-</main>
+<section class="content-grid section">
+  <header>
+    <hgroup>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Content }}</p>
+    </hgroup>
+  </header>
+  <main>
+    <ul>
+      {{ range .RegularPages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </main>
+</section>
 {{ end }}

@@ -240,3 +240,18 @@ section#services {
     }
   }
 }
+
+section.content {
+  min-height: 100svh;
+  > header {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  > main {
+    line-height: 1.5;
+  }
+}
+
+section.section {
+  min-height: 100svh;
+}

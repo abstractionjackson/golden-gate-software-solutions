@@ -1,10 +1,6 @@
 {{ define "main" }}
-  <main>
-    <section>
-      <header><h1>{{ .Title }}</h1></header>
-      <main>
-        {{ .Content }}
-      </main>
-    </section>
-  </main>
+<section class="content">
+  <header><h1>{{ .Title }}</h1></header>
+  <main class="content-grid">{{ .Content }}</main>
+</section>
 {{ end }}
